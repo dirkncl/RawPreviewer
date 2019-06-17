@@ -108,10 +108,11 @@ window.onload = function(){
 		var _script=[];
 		for (var i = 0; i < scripts.length; ++i) {
      //console.log(scripts[i])
+		eval.apply( window, [scripts[i]] );	
       _script[i] = document.createElement('script');
 			_script[i].innerHTML = scripts[i];
 			document.body.appendChild(_script[i]);
-			//eval.apply( window, [scripts[i]] );
+			
 		}
 		
   document.body.innerHTML=preview.innerHTML  
